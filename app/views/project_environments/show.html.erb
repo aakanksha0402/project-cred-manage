@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project_environment.name %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_environment.project.name %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Credentials</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @project_environment.credentials.each do |credential| %>
+      <tr>
+        <td><%= credential.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Create new credential', new_project_environment_credential_path(@project_environment) %>
+<%= link_to 'Edit', edit_project_environment_path(@project_environment) %> |
+<%= link_to 'Back', project_project_environments_path(project_id: @project.id) %>

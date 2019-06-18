@@ -1,0 +1,32 @@
+<%= form_with(model: credential_key, local: true) do |form| %>
+  <% if credential_key.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(credential_key.errors.count, "error") %> prohibited this credential_key from being saved:</h2>
+
+      <ul>
+      <% credential_key.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :credential_id %>
+    <%= form.text_field :credential_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :key %>
+    <%= form.text_field :key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_area :value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

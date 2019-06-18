@@ -1,0 +1,22 @@
+<%= form_with(model: project_environment, url: project_environment.new_record? ? [@project, project_environment] : project_environment, local: true) do |form| %>
+  <% if project_environment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project_environment.errors.count, "error") %> prohibited this project_environment from being saved:</h2>
+
+      <ul>
+      <% project_environment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.select :name, options_for_select(ProjectEnvironment.names.keys.map { |k| [k.titleize, k] }) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

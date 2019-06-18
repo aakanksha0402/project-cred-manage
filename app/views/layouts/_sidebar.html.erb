@@ -1,0 +1,19 @@
+<div class="sidebar" data-background-color="black" data-active-color="danger">
+
+  <div class="sidebar-wrapper">
+    <div class="logo">
+      <a href="http://www.creative-tim.com" class="simple-text">
+        Project Collab
+      </a>
+    </div>
+
+    <ul class="nav">      
+      <li class="<%= yield :projects_class %>">
+        <%= link_to projects_path do %>
+          <%= fa_icon "user" %>
+          <p>Projects</p>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

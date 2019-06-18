@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Credential:</strong>
+  <%= @credential_key.credential %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @credential_key.key %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @credential_key.value %>
+</p>
+
+<%= link_to 'Edit', edit_credential_key_path(@credential_key) %> |
+<%= link_to 'Back', credential_keys_path %>
