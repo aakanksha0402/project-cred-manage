@@ -1,3 +1,50 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="card card-user">
+      <div class="image">
+        <img src="../assets/img/bg5.jpg" alt="...">
+      </div>
+      <div class="card-body">
+        <div class="author">
+          <a href="#">
+            <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
+            <h5 class="title">Mike Andrew</h5>
+          </a>
+          <p class="description">
+            michael24
+          </p>
+        </div>
+        <p class="description text-center">
+          "Lamborghini Mercy
+          <br> Your chick she so thirsty
+          <br> I'm in that two seat Lambo"
+        </p>
+      </div>
+      <hr>
+      <div class="button-container">
+        <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+          <i class="fab fa-google-plus-g"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Create Environment</h5>
+      </div>
+      <div class="card-body">
+        <%= render 'project_environments/form', project_environment: @project_environment %>
+      </div>
+    </div>
+  </div>
+</div>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -26,6 +73,6 @@
     <% end %>
   </tbody>
 </table>
-<%= render 'project_environments/form', project_environment: @project_environment %>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

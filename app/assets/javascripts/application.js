@@ -12,5 +12,9 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require jquery
+//= require popper
+//= require bootstrap
+//= require now-ui-dashboard.min
 //= require turbolinks
 // require_tree .
